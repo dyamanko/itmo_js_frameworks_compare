@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Yamanko D Project CI/CD
 on:
   push:
     branches:
