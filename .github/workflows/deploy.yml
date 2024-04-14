@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main # или main в зависимости от названия вашей основной ветки
+      - main 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -13,7 +13,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Вы можете выбрать нужную версию Node.js
+        node-version: '14'
 
     - name: Install dependencies
       run: npm install
@@ -25,5 +25,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # целевая ветка для размещения
-        FOLDER: dist # каталог, который нужно разместить
+        BRANCH: gh-pages 
+        FOLDER: dist 
